@@ -224,6 +224,12 @@ PublisherBase::assert_liveliness() const
 }
 
 bool
+PublisherBase::can_loan_messages() const
+{
+  return rcl_publisher_can_loan_messages(&publisher_handle_);
+}
+
+bool
 PublisherBase::operator==(const rmw_gid_t & gid) const
 {
   return *this == &gid;
