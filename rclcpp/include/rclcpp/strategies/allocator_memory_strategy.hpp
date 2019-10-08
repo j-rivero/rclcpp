@@ -252,12 +252,10 @@ public:
     }
 
     for (auto waitable : waitable_handles_) {
-      if (!waitable->add_to_wait_set(wait_set)) {
-        RCUTILS_LOG_ERROR_NAMED(
-          "rclcpp",
-          "Couldn't add waitable to wait set: %s", rcl_get_error_string().str);
-        return false;
-      }
+      RCUTILS_LOG_ERROR_NAMED(
+        "rclcpp",
+        "Couldn't add waitable to wait set: %s", rcl_get_error_string().str);
+      return false;
     }
     return true;
   }

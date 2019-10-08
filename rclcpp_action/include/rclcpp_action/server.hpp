@@ -106,12 +106,6 @@ public:
   size_t
   get_number_of_ready_guard_conditions() override;
 
-  /// Add all entities to a wait set.
-  /// \internal
-  RCLCPP_ACTION_PUBLIC
-  bool
-  add_to_wait_set(rcl_wait_set_t * wait_set) override;
-
   /// Return true if any entity belonging to the action server is ready to be executed.
   /// \internal
   RCLCPP_ACTION_PUBLIC

@@ -250,14 +250,6 @@ ClientBase::get_number_of_ready_services()
 }
 
 bool
-ClientBase::add_to_wait_set(rcl_wait_set_t * wait_set)
-{
-  rcl_ret_t ret = rcl_action_wait_set_add_action_client(
-    wait_set, pimpl_->client_handle.get(), nullptr, nullptr);
-  return RCL_RET_OK == ret;
-}
-
-bool
 ClientBase::is_ready(rcl_wait_set_t * wait_set)
 {
   rcl_ret_t ret = rcl_action_client_wait_set_get_entities_ready(

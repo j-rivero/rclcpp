@@ -63,11 +63,6 @@ public:
   size_t
   get_number_of_ready_events() override;
 
-  /// Add the Waitable to a wait set.
-  RCLCPP_PUBLIC
-  bool
-  add_to_wait_set(rcl_wait_set_t * wait_set) override;
-
   /// Check if the Waitable is ready.
   RCLCPP_PUBLIC
   bool

@@ -94,18 +94,6 @@ public:
   size_t
   get_number_of_ready_guard_conditions();
 
-  // TODO(jacobperron): smart pointer?
-  /// Add the Waitable to a wait set.
-  /**
-   * \param[in] wait_set A handle to the wait set to add the Waitable to.
-   * \return `true` if the Waitable is added successfully, `false` otherwise.
-   * \throws rclcpp::execptions::RCLError from rcl_wait_set_add_*()
-   */
-  RCLCPP_PUBLIC
-  virtual
-  bool
-  add_to_wait_set(rcl_wait_set_t * wait_set) = 0;
-
   /// Check if the Waitable is ready.
   /**
    * The input wait set should be the same that was used in a previously call to
