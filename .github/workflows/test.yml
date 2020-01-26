@@ -16,7 +16,7 @@ jobs:
       - uses: ros-tooling/setup-ros2@0.0.12
         with:
           required-ros-distributions: eloquent
-      - uses: ros-tooling/action-ros2-ci@0.0.12
+      - uses: ros-tooling/action-ros2-ci@0.0.13
         with:
           package-name: rclcpp
           colcon-mixin-name: coverage-gcc
