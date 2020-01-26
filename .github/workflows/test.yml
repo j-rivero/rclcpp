@@ -13,10 +13,10 @@ jobs:
       matrix:
         os: [ubuntu-18.04]
     steps:
-      - uses: ros-tooling/setup-ros2@0.0.6
+      - uses: ros-tooling/setup-ros2@0.0.12
         with:
           required-ros-distributions: eloquent
-      - uses: ros-tooling/action-ros2-ci@0.0.10
+      - uses: ros-tooling/action-ros2-ci@0.0.12
         with:
           package-name: rclcpp
           colcon-mixin-name: coverage-gcc
