@@ -19,9 +19,9 @@ jobs:
       - uses: ros-tooling/action-ros2-ci@0.0.13
         with:
           package-name: rclcpp
+          # package-name: rclcpp rclcpp_action rclcpp_components rclcpp_lifecycle
           colcon-mixin-name: coverage-gcc
           colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
-          fail_ci_if_error: false
       - uses: codecov/codecov-action@v1
         # Prevent being rate limited by only reporting coverage from the Ubuntu
         # build.
